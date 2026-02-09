@@ -1,0 +1,23 @@
+Step 3: Decision Table
+
+Decision Table TCI's
+
+| TCI  |  Parameter  |        Condition        |  Test Case  |
+--------------------------------------------------------------
+| DT1  |  discount   |    Non resident/non vet |  TC3.1      |
+| DT2  |  discount   |      is resident        |  TC3.2      |
+| DT3  |  discount   |       is veteran        |  TC3.3      |
+| DT4  |  discount   |      is neither         |  TC3.4      |
+--------------------------------------------------------------
+
+Decision Table Test Cases:
+
+assuming all examples are for 4 nights adult guest with a base price of 400
+
+|  TC ID  |  TCI Covered  | Input: Resident | Input: Veteran | Expect Output  |
+-------------------------------------------------------------------------------
+| TCI 3.1 |      DT1      |      false      |     false      |      $400      |
+| TCI 3.2 |      DT2      |      true       |     false      |      $390      |
+| TCI 3.3 |      DT3      |      false      |     true       |      $380      |
+| TCI 3.4 |      DT4      |      true       |     true       |      $351      |
+-------------------------------------------------------------------------------

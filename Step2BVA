@@ -1,0 +1,29 @@
+STEP 2: BVA
+
+| BVA  |  Parameter  |     Boundary Value      |  Test Case  |
+--------------------------------------------------------------
+| BVA1 |   nights    |       1 (min)           |  TC2.1      |
+| BVA2 |   nights    |     0 (below min)       |  TC2.2      |
+| BVA3 |   nights    |       14 (max)          |  TC2.3      |
+| BVA4 |   nights    |      14 (above max)     |  TC2.4      |
+| BVA5 |   guestAge  |  0 (lower child bound)  |  TC2.5      |
+| BVA6 |   guestAge  |  12 (upper child bound) |  TC2.6      |
+| BVA7 |   guestAge  |  13 (lower adult bound) |  TC2.7      |
+| BVA8 |   guestAge  |  64 (upper adult bound) |  TC2.8      |
+| BVA9 |   guestAge  |  65 (lower senior bound)|  TC2.9      |
+--------------------------------------------------------------
+
+BVA Test Cases
+
+|  TC ID  |  TCI Covered  |  Input: Nights  | Input: Age  |  Resident  |  Veteran  | Expect Output  |
+-----------------------------------------------------------------------------------------------------
+| TCI 2.1 |      BVA1     |        1        |      10     |   False    |   False   |      $25       |
+| TCI 2.2 |      BVA2     |        0        |      30     |   False    |   False   |     error      |
+| TCI 2.3 |      BVA3     |        14       |      70     |   False    |   False   |      $560      |
+| TCI 2.4 |      BVA4     |        20       |      55     |   False    |   False   |     error      |
+| TCI 2.5 |      BVA5     |        3        |      -1     |   False    |   False   |     error      |
+| TCI 2.6 |      BVA6     |        4        |      12     |   False    |   False   |      $100      |
+| TCI 2.7 |      BVA7     |        2        |      13     |   False    |   False   |      $100      |
+| TCI 2.8 |      BVA8     |        4        |      64     |   False    |   False   |      $200      |
+| TCI 2.9 |      BVA9     |        3        |      65     |   False    |   False   |      $120      |
+-----------------------------------------------------------------------------------------------------
